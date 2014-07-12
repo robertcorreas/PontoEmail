@@ -1,7 +1,7 @@
-﻿using System.Windows.Input;
-using Catel.IoC;
+﻿using Catel.IoC;
 using Catel.MVVM;
 using Model;
+using System.Windows.Input;
 
 namespace ViewModel
 {
@@ -28,7 +28,8 @@ namespace ViewModel
         {
             Catel.IoC.ServiceLocator.Default.RemoveAllTypes(typeof(EmailConfig));
             Catel.IoC.ServiceLocator.Default.RemoveAllInstances(typeof(EmailConfig));
-            Catel.IoC.ServiceLocator.Default.RegisterInstance(new EmailConfig(Login,Password,SMPT,Port.Value,IsSSL));
+            Catel.IoC.ServiceLocator.Default.RegisterInstance(new EmailConfig(Login, Password, SMPT, Port.Value, IsSSL));
+            CloseViewModel(true);
         }
     }
 }
