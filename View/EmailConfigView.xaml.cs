@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EmailConfigView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EmailConfigView : Window
     {
-        public MainWindow()
+        public EmailConfigView()
         {
             InitializeComponent();
-        }
-
-        private void MenuItem_OnClick(object sender, RoutedEventArgs e)
-        {
-            new EmailConfigView().ShowDialog();
         }
     }
 }

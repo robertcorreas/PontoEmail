@@ -3,6 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Menu VerticalAlignment="Top" Padding="4">
+            <MenuItem Header="Setting email Configuration" Click="MenuItem_OnClick"/>
+            <MenuItem Header="Setting email properties" />
+            <MenuItem Header="Setting date and time for email" />
+        </Menu>
     </Grid>
 </Window>
