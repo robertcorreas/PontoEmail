@@ -1,0 +1,66 @@
+﻿<catel:DataWindow x:Class="View.EmailPropertiesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:catel="http://catel.codeplex.com"
+        Title="Setting email properties" Height="230" Width="300">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="4" />
+                <Setter Property="Padding" Value="4" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="4" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Column="0" Grid.Row="0"
+                Content="Email of sender" />
+        <TextBox Grid.Column="1" Grid.Row="0" 
+                 Text="{Binding SenderEmail}"/>
+
+        <Label Grid.Column="0" Grid.Row="1"
+                Content="Name of sender" />
+        <TextBox Grid.Column="1" Grid.Row="1" 
+                 Text="{Binding SenderName}"/>
+
+        <Label Grid.Column="0" Grid.Row="2"
+                Content="Email of receiver" />
+        <TextBox Grid.Column="1" Grid.Row="2" 
+                 Text="{Binding ReceiverEmail}"/>
+
+        <Label Grid.Column="0" Grid.Row="3"
+                Content="Name of receiver" />
+        <TextBox Grid.Column="1" Grid.Row="3" 
+                 Text="{Binding ReceiverName}"/>
+
+        <Label Grid.Column="0" Grid.Row="4"
+                Content="Subject" />
+        <TextBox Grid.Column="1" Grid.Row="4" 
+                Text="{Binding Subject}" />
+        
+        <StackPanel Grid.Column="1" Grid.Row="5"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <Button Content="OK"
+                    Width="80" Margin="4"
+                    Command="{Binding OnOk}" />
+            <Button Content="Cancel"
+                    Width="80" Margin="4"
+                    IsCancel="True"/>
+        </StackPanel>
+
+    </Grid>
+</catel:DataWindow>

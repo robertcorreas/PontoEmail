@@ -12,9 +12,14 @@ namespace View
             InitializeComponent();
         }
 
-        private void MenuItem_OnClick(object sender, RoutedEventArgs e)
+        private void ShowEmailConfigView_OnClick(object sender, RoutedEventArgs e)
         {
             new EmailConfigView().ShowDialog();
+        }
+
+        private void ShowEmailPropertiesView_OnClick(object sender, RoutedEventArgs e)
+        {
+            new EmailPropertiesView().ShowDialog();
         }
     }
 }

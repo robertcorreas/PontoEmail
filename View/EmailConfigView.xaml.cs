@@ -4,7 +4,7 @@ using ViewModel;
 namespace View
 {
     /// <summary>
-    /// Interaction logic for EmailConfigView.xaml
+    ///     Interaction logic for EmailConfigView.xaml
     /// </summary>
     public partial class EmailConfigView : DataWindow
     {
